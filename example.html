@@ -9,7 +9,8 @@
         .container {
             left: 250px;
             position: relative;
-            left: 250px;
+            left: 100px;
+            top:50px;
             margin: 50px;
             margin-bottom: 0;
         }
@@ -19,25 +20,43 @@
         }
 
         p {
-            margin-top: 1   ;
+            margin-top: 1;
         }
         .container p {
             margin-top: 0;
             font-size: 100%;
         }
 
-        .content {
-           
+        table, th, td {
+            border:1px solid black;
+        }
+        th, td {
+            padding: 15px;
         }
        
     </style>
 </head>
 <body>
+
+    <table style="background-color:black; height:50px; width:100%">
+        <tr>
+            <td style="color:white; font-size:20px;">Fixed navbar</td>
+            <td style="color:white;">home</td>
+            <td style="color:lightgray;">Link</td>
+            <td style="color:gray;">Disabled</td>
+        </tr>
+
+    </table>
+    
     <div class="container">
-        <h1 style="font-size: 40px;">Sticky footer</h1>
-        <p>Pin a footer to the bottom of the viewport in desktop browsers with this <br /> custom HTML and CSS.</p>
+        <h1 style="font-size: 40px;">Sticky footer with fixed navbar</h1>
+        <p>
+            Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been
+            <br /> added with <span style="color:red">padding-top: 60px; </span> on the 
+            <span style="color:red;">main > .container. </span>
+        </p>
  
-        Use <a href="https://getbootstrap.com/docs/5.3/examples/sticky-footer-navbar/">the sticky footer with a fixed navbar</a>
+        Use <a href="ee.html">the sticky footer with a fixed navbar</a>
         if need be, too.
     </div>
 </body>
