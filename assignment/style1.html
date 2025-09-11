@@ -10,57 +10,56 @@
     .div_navtop{
         color:white;
         background-color: green;
-        padding:  2px 10px;
+        padding:  5px 10px;
         border-radius: 4px;
+        margin: 5px 25px 5px 25px;
     }
 
     .div_navtop_h1{
         margin: 0px;
     }
-
+    
     .container {
         display: flex;
         gap: 20px;
         padding: 20px;
-    }
-    nav { /* 왼쪽 메뉴 */
-        flex: 1;
+        margin: 0px;
     }
 
     ul{
         list-style: none;
         padding:0px;
+        margin: 0px 5px 5px 5px;
     }
-    /*.side ul{
-        display: flex;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 10px; 
-    } */
-    .side li{
-        border-radius: 4px ;
-        padding: 4px;
-        background:lightgray; 
-        text-align: center; 
+
+    .div_leftcontent ul li {
+        width: 200px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: lightgray;
+        margin-bottom: 5px;
+    }
+
+    .div_leftcontent ul li.active{
+        background-color: green;
+        color:white;
     }
 
     main { /*본문*/
-        flex: 3;
+        flex:5;    
         background-color: white;
         padding: 10px;
     }
 
-    aside { /*오른쪽 메뉴*/
-        height: 360px;
-        flex: 1;
+    .div_rightcontent { /*오른쪽 메뉴*/
+        width: 200px;
+        height: 300px;
+        margin: 0px 5px 0px 0px;
+        padding: 5px;
         background-color: rgba(35, 138, 223, 0.918);
-        padding:  4px 8px 30px;
         border-radius: 4px;
-        font-size: large;
-        text-align: left;
-        line-height: 25px;
+        flex: 1;
     }
 
     footer { /*bottom 메뉴*/
@@ -69,7 +68,8 @@
         border-radius: 4px;
         font-size: smaller;
         text-align: center;
-        padding:1px;
+        padding:5px 10px;
+        margin: 0px 21px 0px 21px;
     }
     </style>
 
@@ -77,25 +77,29 @@
 <body>
     
     <div class="div_navtop">
-        <h1 class="div_navtop_h1">Welcome to 22200387's Homepage</h1> 
+        <h1 class="div_navtop_h1">Welcome to 손우진's Homepage(22200387)</h1> 
         <p>use the menu to select different Stylesheets</p>
     </div>
     <div class="container">
-        <nav>
-        <ul class="side">
-            <li class="side">Stylesheet 1</li>    
-            <li class="side">Stylesheet 2</li>     
-            <li class="side">Stylesheet 3</li>   
-            <li class="side">Stylesheet 4 </li>
-            <li class="side" >No stylesheet <a href="http://127.0.0.1:5500/index.html" target="_blank"></a></li>
+        <div class="div_leftcontent">
+        <ul>
+            <li class="active">Stylesheet 1</li>    
+            <li>Stylesheet 2</li>     
+            <li>Stylesheet 3</li>   
+            <li>Stylesheet 4 </li>
+            <li>No stylesheet <a href="index.html"></a></li>
         </ul>
-        </nav>
+        </div>
 
         <main>
             <h2>Same Page Diffrent Stylesheets</h2>
             <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. 
                 You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following 
-                links:  
+                links: <br />
+                <a href="style1.html">Stylesheet1</a>
+                <a href="style2.html">Stylesheet2</a>
+                <a href="style3.html">Stylesheet3</a>
+                <a href="style4.html">Stylesheet4</a>
             </p>
 
             <h2>No Stlyes</h2>
@@ -105,10 +109,10 @@
             <a href="index.html">No Stylesheet.</a></p>
         </main>
 
-        <aside>
+        <div class="div_rightcontent">
             <h3 style="color:white">Side-Bar</h3>
             <p style="color:white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-        </aside>
+        </div>
     </div>
     
     <footer >
