@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #d14836;
+    }
+    .navtop{
+        color:white;
+        margin:0px 0px 0px 0px;
+    }
+    .navtop_h1{
+        font-size:330%;
+        margin-bottom: 0;
+    }
+    .navtop_h2{
+        font-size:200%;
+        margin-top: 0;
+    }
+    
+    /*본문*/
+    .container{ 
+        display: flex;
+        margin: 0px;
+        background-color: white;
+    }
+
+    a{
+        color: #d14836;
+    }
+
+    .div_right {
+        width: 200px;
+        margin: 0px 5px 0px 5px;
+    }
+
+    ul{
+        list-style: none;
+        padding:0px;
+        margin: 10px 5px 0px 5px;
+    }
+    
+    .div_right ul li {
+        background-color: #d14836;
+        color:white;
+        border: 1px solid #d14836;
+        border-radius: 15px;
+        text-align: center;
+        margin: 5px 0px 15px 0px;
+        height:20px;
+        padding: 10px 10px 5px 10px;
+        width: 160px;
+    }
+
+    .div_right ul li.active{
+        background-color: white;
+        color:#d14836;
+    }
+
+    .div_footer{
+        border: 1px solid #F6DAD7;
+        background-color: #F6DAD7;
+        padding:5px 10px;
+    }
+
+    .div_bottom{
+        color:white;
+        font-size: 70%;
+        padding: 10px 10px 10px 10px;
+    }
+</style>
+<body>
+    <div>
+        <div class="navtop">
+            <h1 class="navtop_h1">Welcome to 손우진's Homepage(22200387)</h1>
+            <h2 class="navtop_h2">Use the menu to select different Stylesheets</h2>
+        </div>
+    </div>
+    <div class="container">
+        <main>
+            <h1 style="color: #d14836;">Same Page Diffrent Stylesheets</h1>
+            <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. 
+                You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following 
+                links: <br />
+                <a href="style1.html">Stylesheet1</a>
+                <a href="style2.html">Stylesheet2</a>
+                <a href="style3.html">Stylesheet3</a>
+                <a href="style4.html">Stylesheet4</a>
+            </p>
+            <div>
+                <h2 style="color: #d14836;">No Styles</h2>
+                <p>
+                    This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet: <br />
+                    <a href="index.html">No Stylesheet.</a>
+                </p>
+            </div>          
+        </main>
+
+        <div class="div_right">
+            <ul>
+                <li>Stylesheet 1</li>
+                <li class="active">Stylesheet 2</li>
+                <li>Stylesheet 3</li>
+                <li>Stylesheet 4</li>
+                <li>No Stylesheet</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class=div_footer>
+            <h1 style="color:#d14836">Side-Bar</h1>
+            <p style="color:#d14836">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+
+    <div class="div_bottom">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+    </div>
+</body>
+</html>
