@@ -6,13 +6,32 @@
     <title>Document</title>
     <style>
 
+        .navbar {
+            display:flex;
+            align-items: center;
+            background-color: black;
+            padding: 8px 12px;
+        }
+
+        .navbar_menu {
+            list-style: none;
+            display:flex;
+            margin: 0;
+            padding-left: 0;
+            flex: 1;
+        }
+        .navbar_menu li {
+            color:white;
+            padding:12px 12px;
+        }
+
+        .body {
+            margin: 0;
+        }
         .container {
-            left: 250px;
             position: relative;
-            left: 100px;
-            top:50px;
-            margin: 50px;
-            margin-bottom: 0;
+            left:100px;
+            top: 50px;
         }
 
         h1 {
@@ -27,26 +46,68 @@
             font-size: 100%;
         }
 
-        table, th, td {
-            border:1px solid black;
+        footer {
+            position: absolute;  
+            bottom: 0;   
+            height: 60px;
+            left: 0;
+            right: 0;
+            border: 1px solid white;   
+            background-color: white;   
+            display:flex;
         }
-        th, td {
-            padding: 15px;
+
+        .div_bottom {
+            position: relative;
+            left:100px;
+            padding:20px 10px;
+        }
+
+        .div_bottom_right {
+            position: relative;
+            margin-left: auto;
+        }
+        button {
+            background-color: black;
+            border-color: green;
+            border-radius: 5px;
+            color :green;
+            width: 60px;
+            height: 40px;
+            
+        }
+
+        input {
+            border: 2px solid white;
+            border-radius: 4px;
+            width: 170px;
+            height: 30px;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        select {
+            background-color: blueviolet;
         }
        
     </style>
 </head>
 <body>
+    <div class="navbar">
+    <ul class="navbar_menu">
+        <li>Fixed Navbar</li>
+        <li>Home</li>
+        <li style="color:lightgray;">Link</li>
+        <li style="color:gray;">Disabled</li>
+    </ul>
+    <div>
+        <form>
+            <input type="text" name="search" placeholder="Search" >
+            <button type="search" value="search">Search</button>
+        </form>
+    </div>
 
-    <table style="background-color:black; height:50px; width:100%">
-        <tr>
-            <td style="color:white; font-size:20px;">Fixed navbar</td>
-            <td style="color:white;">home</td>
-            <td style="color:lightgray;">Link</td>
-            <td style="color:gray;">Disabled</td>
-        </tr>
-
-    </table>
+    </div>
     
     <div class="container">
         <h1 style="font-size: 40px;">Sticky footer with fixed navbar</h1>
@@ -56,8 +117,23 @@
             <span style="color:red;">main > .container. </span>
         </p>
  
-        Use <a href="ee.html">the sticky footer with a fixed navbar</a>
-        if need be, too.
+        Back to <a href="ee.html">the default sticky footer</a> minus the navbar.
     </div>
+
+    <footer>
+        <div class="div_bottom">
+            Place sticky footer content here.
+        </div>
+        <div class="div_bottom_right">
+            <form>
+                <select>
+                    <option>Light</option>
+                    <option>Dark</option>
+                    <option>Auto</option>
+
+                </select>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
