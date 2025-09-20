@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22200387</title>
+
+    <style>
+        .title {
+            text-align: center;
+        }
+
+
+        .row-flex{
+            display: flex;
+            gap: 20px;
+        }
+
+        .add{
+            flex: 1;
+        }
+
+        ul {
+            list-style: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h2>목록 추가 및 삭제</h2>
+    </div>
+
+<div class="row-flex">
+    <div class="add">
+        <label for="plus">목록 추가</label>
+        <input type="text" id="plus">
+        <button type="button" onclick="addtolist()">추가</button>
+        <button type="submit" onclick="deletelist()">삭제</button>
+
+        <ul id="mylist"></ol>
+    </div>
+</div>
+
+<script>
+    function addtolist(){
+        const input = document.getElementById("plus");
+        const itemtext = input.value.trim();
+
+        if (itemtext !== "") {
+            const newlist = document.createElement("li");
+            newlist.textContent = itemtext;
+            const list = document.getElementById("mylist");
+            list.appendChild(newlist);
+
+            input.value = "";
+        }
+
+    } 
+
+    function deletelist(){
+        const list = document.getElementById("mylist");
+
+        if (list.lastElementChild) {
+            list.removeChild(list.lastElementChild);
+        }
+    }
+</script>
+
+</body>
+</html>
