@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    div.example {
+        font-size:80px;
+        background-color: yellowgreen;
+    }
+
+    @media only screen and (max-width:450px){
+        div.example{
+            font-size:30px;
+            background-color:aquamarine;
+        }
+    }
+
+
+    @media only screen and (min-width:451px) and (max-width:600px){
+        div.example2 {
+            font-size:40px;
+            background-color: pink;
+        }
+    }
+
+     @media only screen and (min-width:601px){
+        div.example3 {
+            font-size:50px;
+            background-color: yellowgreen;
+        }
+    }
+</style>
+<body>
+    <div class="example">example</div>
+
+    450 px 이하일때, 배경은 아쿠아마린/글자크기는 30px
+    451~600px 일때, 배경은 핑크/글자크기는 40px
+    601~px이상일때, 배경은 옐로우그린/글자크기는 50px
+
+    <script>
+        let memory_temp = confirm ("기억나나?");
+        listener_resize();
+        function listener_resize(){
+        let width = window.innerWidth;
+        //alert(width);
+        
+        if (width>600){
+            $(".example").addClass("example3");
+        }else if (width>450) {
+            $(".example").addClass("example2");
+        }else {
+            $(".example").addClass("example3");
+        }
+    }
+        window.addEventListener("resize",function(){
+            console.log("resized!")
+        });
+
+        $(window).resize(function() {
+            console.log("resized2")
+        });
+    </script>
+
+<style>
+    
+
+    img {
+        max-width:100%;
+        height:auto;
+    }
+
+    div.div_img {
+        height: 300px;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFzjbloQW13xjwhueHJImnm_KLAyIgHG8NZ4Wx3iVg0ajjfYolIgi_7nkVM4VlsmUQNjQusR0aQUwpar9MuK8qXS9yoRRsxHgiYqhUN4C');
+        /*background-repeat:no-repeat; */
+        /*background-size: 100% 100%;*/
+        background-size: cover; 
+        background-repeat: no-repeat;
+    }
+</style>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFzjbloQW13xjwhueHJImnm_KLAyIgHG8NZ4Wx3iVg0ajjfYolIgi_7nkVM4VlsmUQNjQusR0aQUwpar9MuK8qXS9yoRRsxHgiYqhUN4C">
+
+    <div class="div_img">
+        1122</br> 
+    </div>
+</body>
+</html>
